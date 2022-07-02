@@ -1,26 +1,46 @@
-# PiotkM
-使用 Mikrotik RouterOS 监控的网页管理面板 
-<br>
-支持 Mikrotik RouterOS 7 最新版本
-<br>
-功能：支持批量添加设备 
-<br>
-     监控服务器状态,cpu负载情况,记录网卡流量使用情况,实时流量监控,服务器子网监控
-     <br>
-     面板自带的工具：在线ping/服务器设备在线情况/使用情况报告/服务器使用日志记录/雷达调度器/......具体自行搭建
-     <br>
-所需环境：SNMP服务
-        <br>
-         设备服务器开启 MikroTik API 
-         <br>
-         NodeJS 14.+
-         <br>
-         MySQL 5.6    
-         <br>
-搭建方法：         
-$ git clone https://github.com/piokto/PiotkM.git $
+# DNMS
 
+Network monitoring app build build with NodeJS. Compatible with device with RouterOS and AirOS.
 
-         
-     
+**Feature**
+1. Monitoring latency, signal strength, traffic, etc.
+2. Informative display with map, diagram, table
+3. Grouping device
+4. Notification
+5. Multi server
+6. Additional tools for diagnostic like ping, log, ARP, etc.
+
+**Requirements**
+1.  SNMP enabled
+2.  MikroTik API enabled
+3. NodeJS ^14
+4. MySQL ^5.6
+
+## Instalation
+- Clone this repo
+```sh
+$ git clone https://github.com/daimus/dnms.git
+```
+- Import `dnms.sql` to your database
+- CD to app directory and install required package
+```sh
+$ npm install
+```
+- Run app
+```sh
+$ node app.js
+```
+> #### Default Authentication
+> - **Username:** admin
+> - **Password:** 11111111
+
+## Screenshoots
+
+I can't provide live preview of this app. But here some screenshoots to give you an insight about this app.
+
+![Screenshot](https://1.bp.blogspot.com/-toUGHq34tzA/YJzrpZaVIuI/AAAAAAAADU4/FpkeurL9ThctwDZF33sPpA5hbQ-b2PDmQCLcBGAsYHQ/s16000/dashboard.jpg)
+![Screenshot](https://1.bp.blogspot.com/-qB-lCxOI7OQ/YJzrpYkyPGI/AAAAAAAADU0/6JguPbVKr8I_DJZr1qvWPCV_EpvDTMSZgCLcBGAsYHQ/s16000/diagram.jpg)
+![Screenshot](https://1.bp.blogspot.com/-nXIOWjXUUqM/YJzrpZR9hvI/AAAAAAAADU8/3ci70mFzE8gZrL12uLjBtuRrjLbaW8e9gCLcBGAsYHQ/s16000/manage.jpg)
+![Screenshot](https://1.bp.blogspot.com/-SAgy4ySaUUo/YJzrp0qQfxI/AAAAAAAADVA/fTWRJFgTECQAtB11Ccs1LimBKTD6OVNiACLcBGAsYHQ/s16000/map.jpg)
+![Screenshot](https://1.bp.blogspot.com/-TEUBewBloe4/YJzrqG95EjI/AAAAAAAADVE/V9MNjq4DwQcIM5e3RDbaXXPBL1u7M6q3gCLcBGAsYHQ/s16000/monitor.jpg)
 
